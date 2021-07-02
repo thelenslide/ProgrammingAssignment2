@@ -19,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This is a function of getting the inverse
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
@@ -27,9 +27,9 @@ cacheSolve <- function(x, ...) {
   if(!is.null(mtrx)) {
     message("getting cache inverse data")
     return(mtrx)
-  }
+  } ##matrix is obtained from the subject
   data <- x$get()
-  mtrx <- solve(data, ...)
+  mtrx <- solve(data, ...) ##then calculates the inverse
   x$setinverse(mtrx)
-  mtrx
+  mtrx ##returns the matrix
 }
